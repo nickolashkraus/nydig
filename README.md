@@ -32,3 +32,40 @@ A good module should raise the level of abstraction by describing a new concept 
 * Modules should be flat. Creating a deeply-nested tree of modules is discouraged. Instead, individual modules should be composable and reusable. Modules should accept the object it needs as an argument via an input variable, thereby using dependency inversion to establish a relationship with the higher-level calling module.
 * Modules should provides a higher level of abstraction. Do not write modules that are just thin wrappers around single resource types.
 * Do not overuse modules. A module should describe a collection of logically consistent resources. Subdividing a system into multiple tightly coupled modules is discourages.
+
+### Terraform Data Sources
+
+#### What is a Terraform data source?
+
+From the Terraform documentation...
+
+>*Data sources* allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.
+
+There are two commonly used sources from which Terraform can retrieve data:
+* **Resource**: Given a resource (ex. `aws_instance`) and query constraints defined by the data source, Terraform retrieves data about the resource for use in configuration elsewhere in the Terraform module.
+* **Remote state**: The `terraform_remote_state` data source retrieves the root module output values from some other Terraform configuration, using the latest state snapshot from the remote backend.
+
+#### Resource vs. remote state
+
+In most cases, it is better to retrieve data directly from the resource itself than from remote state. In this way, a dependency between the data source (remote Terraform module) and the data destination (consuming Terraform module) can be eliminated. Instead, the resource itself should comprise the information needed to facilitate querying and filtering.
+
+**Example**
+
+```hcl
+data "aws_vpc" "us" {
+  provider = aws.us
+
+}
+
+data "aws_subnet_ids" "public" {
+  provider = aws.us
+  vpc_id   = data.aws_vpc.us.id
+
+  filter {
+    name   = "tag:public"
+    values = ["true"]
+  }
+}
+```
+
+The above example is considered a better practice than outputting the specific subnet IDs from the Terraform module in which they are defined. That method, however, is better than hardcoding the subnet IDs as an input variable to the consuming Terraform module.
