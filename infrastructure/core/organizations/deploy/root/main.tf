@@ -11,3 +11,9 @@ module "organizations" {
 
   /* Add variables here... */
 }
+
+terraform {
+  backend "s3" {
+    /* Configure S3 backend... */
+  }
+}

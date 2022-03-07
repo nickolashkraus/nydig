@@ -9,3 +9,9 @@ provider "aws" {
 module "spoke" {
   source = "../../modules/spoke"
 }
+
+terraform {
+  backend "s3" {
+    /* Configure S3 backend... */
+  }
+}

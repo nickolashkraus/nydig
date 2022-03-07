@@ -16,3 +16,9 @@ module "s3_backend" {
   s3_bucket      = "terraform-state-nydig"
   dynamodb_table = "terraform-state-nydig"
 }
+
+terraform {
+  backend "s3" {
+    /* Configure S3 backend... */
+  }
+}
