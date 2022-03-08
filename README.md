@@ -72,7 +72,3 @@ data "aws_subnet_ids" "public" {
 ```
 
 The above example is considered a better practice than outputting the specific subnet IDs from the Terraform module in which they are defined. That method, however, is better than hardcoding the subnet IDs as an input variable to the consuming Terraform module.
-
-### The `for_each` Meta-Argument
-
-<!-- TODO -->
