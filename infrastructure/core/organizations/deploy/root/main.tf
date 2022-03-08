@@ -7,8 +7,7 @@ provider "aws" {
 }
 
 module "organizations" {
-  source = "../../modules/organizations"
-
+  source = "../../"
   /* Add variables here... */
 }
 
