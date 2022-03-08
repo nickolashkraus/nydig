@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 module "s3_backend" {
-  source         = "../../"
+  source         = "../"
   s3_bucket      = "terraform-state-nydig"
   dynamodb_table = "terraform-state-nydig"
 }

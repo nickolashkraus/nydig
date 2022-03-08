@@ -7,7 +7,7 @@ provider "aws" {
 }
 
 module "organizations" {
-  source = "../../"
+  source = "../"
   /* Add variables here... */
 }
 
