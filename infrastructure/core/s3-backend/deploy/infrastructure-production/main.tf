@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# AWS ORGANIZATIONS
+# AMAZON S3 BUCKET AND DYNAMODB TABLE FOR STORING TERRAFORM STATE
 # Deploy 's3_backend' Terraform module to 'infrastructure-production' AWS
 # account.
 # -----------------------------------------------------------------------------
@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 module "s3_backend" {
-  source         = "../../modules/s3-backend"
+  source         = "../../"
   s3_bucket      = "terraform-state-nydig"
   dynamodb_table = "terraform-state-nydig"
 }
