@@ -2,11 +2,12 @@
 # AMAZON S3 BUCKET AND DYNAMODB TABLE FOR STORING TERRAFORM STATE
 # This Terraform module deploys the resources necessary to store Terraform
 # state on AWS.
+#
 # It includes the following:
 #   * Amazon S3 Bucket
 #   * DynamoDB Table
 #
-# GitHub: infrastrucuture-core-s3-backend
+# GitHub: infrastructure-core-s3-backend
 # -----------------------------------------------------------------------------
 
 terraform {

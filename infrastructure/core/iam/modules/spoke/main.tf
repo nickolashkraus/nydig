@@ -3,7 +3,7 @@
 # This Terraform module is part of the hub-and-spoke model for IAM role
 # delegation.
 #
-# GitHub: infrastrucuture-core-iam
+# GitHub: infrastructure-core-iam
 #
 # * Each IAM role in a spoke account must grant access to the administrative
 #   AWS account, which creates a trust relationship with the administrative

@@ -3,7 +3,7 @@
 # This Terraform module creates organizational units (OU) within the root
 # AWS account.
 #
-# GitHub: infrastrucuture-core-organizations
+# GitHub: infrastructure-core-organizations
 #
 # Organzational Units:
 #   * Product
