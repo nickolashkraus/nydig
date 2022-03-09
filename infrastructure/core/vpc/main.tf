@@ -54,6 +54,12 @@ resource "aws_route" "vpc_peering_connection" {}
 /* Add additional VPC peering connections... */
 
 # -----------------------------------------------------------------------------
+# VPC FLOW LOGS
+# -----------------------------------------------------------------------------
+resource "aws_cloudwatch_log_group" "log_group" {}
+resource "aws_flow_log" "flow_log" {}
+
+# -----------------------------------------------------------------------------
 # PRIVATE SUBNETS
 # -----------------------------------------------------------------------------
 resource "aws_subnet" "private" {
@@ -88,3 +94,4 @@ resource "aws_route_table" "public" {}
 resource "aws_route" "public" {}
 resource "aws_network_acl" "public" {}
 resource "aws_route_table_association" "public" {}
+
