@@ -59,6 +59,14 @@ resource "aws_route" "vpc_peering_connection" {}
 resource "aws_cloudwatch_log_group" "log_group" {}
 resource "aws_flow_log" "flow_log" {}
 
+resource "aws_iam_role" "iam_role" {
+  name = "flow-log"
+}
+
+resource "aws_iam_role_policy" "iam_role_policy" {
+  name = "flow-log"
+}
+
 # -----------------------------------------------------------------------------
 # PRIVATE SUBNETS
 # -----------------------------------------------------------------------------
