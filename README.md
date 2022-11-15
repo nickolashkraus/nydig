@@ -1,6 +1,6 @@
 # [NYDIG](https://nydig.com)
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/NickolasHKraus/nydig/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/nickolashkraus/nydig/blob/master/LICENSE)
 
 Solution for the technical interview project
 
