@@ -1,17 +1,22 @@
 # [NYDIG](https://nydig.com)
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/nickolashkraus/nydig/blob/master/LICENSE)
+* **Date**: March 9th, 2022
+* **Format**: Technical Interview
 
-Solution for the technical interview project
+Solution for the technical interview
+
+---
 
 ## Overview
 
 **Objective**: Design and codify a solution for self-hosting Splunk Enterprise used to collect and index VPC flow logs from a development and production VPC.
 
 ## Documentation
+
 * [Technical Implementation Plan (TIP)](https://docs.google.com/document/d/1ngeUnW6V_6dT39Ch0z5WAEMv9DhDOLNEiLzSUuovPs0/edit?usp=sharing)
 
 ## Presentation
+
 * [Google Slides](https://docs.google.com/presentation/d/1KEspS8o3wSaBs8Jgi7jBJwqnJZlTq_D5KwmMqCr4zg8/edit?usp=sharing)
 
 ## Technical Considerations
